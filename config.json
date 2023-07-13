@@ -1,0 +1,13 @@
+{
+  "baseUrl": "http://localhost:1337",
+  "apiUrl": "http://localhost:1337/api",
+  "productsApiUrl": "api/items?populate=*",
+  "categoriesApiUrl": "api/categories?populate=*",
+  "blogsApiUrl": "api/blogs?populate=*",
+  "usersApiUrl": "/api/users",
+  "myUserApiUrl": "/api/users/me",
+  "contactApiUrl": "/api/email-lists",
+  "userRegistration": "/api/auth/local/register",
+  "userLogin": "/api/auth/local",
+  "siteLocale": "en-PH"
+}

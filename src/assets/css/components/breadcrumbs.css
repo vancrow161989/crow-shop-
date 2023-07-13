@@ -1,0 +1,9 @@
+@layer components {
+  .breadcrumbs-list li:last-child {
+    @apply leading-7;
+  }
+
+  .breadcrumbs-list li:last-child a:after {
+    @apply hidden;
+  }
+}

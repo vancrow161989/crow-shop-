@@ -1,0 +1,16 @@
+@import "tailwindcss/base";
+@import "./assets/css/base/base.css";
+
+@import "tailwindcss/components";
+@import "./assets/css/components/buttons.css";
+@import "./assets/css/components/navbar.css";
+@import "./assets/css/components/modal.css";
+@import "./assets/css/components/breadcrumbs.css";
+@import "./assets/css/components/backtotop.css";
+@import "./assets/css/components/carousel.css";
+@import "./assets/css/components/toast.css";
+@import "./assets/css/components/mobile-menu.css";
+@import "./assets/css/components/table.css";
+
+@import "tailwindcss/utilities";
+@import "./assets/css/utilities/utilities.css";

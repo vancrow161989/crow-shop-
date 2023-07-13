@@ -1,0 +1,13 @@
+@layer components {
+  .mobile-menu {
+    @apply fixed top-0 left-0 z-20 h-full w-0 overflow-x-auto bg-gray-300 transition-[0.5s];
+  }
+
+  .mobile-menu.active {
+    @apply w-[75vw];
+  }
+
+  .mobile-menu-content.active {
+    @apply ml-[75vw];
+  }
+}

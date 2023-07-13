@@ -1,0 +1,5 @@
+@layer components {
+  .nav > ul > li > a.active {
+    @apply font-bold text-primary-900;
+  }
+}

@@ -1,0 +1,37 @@
+@layer utilities {
+  .absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .absoluteVCenter {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+  .bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
+  }
+
+  .bg-overlay-100 {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .bg-overlay-500 {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .sticky-hold {
+    height: 100vh;
+    overflow: hidden;
+  }
+}

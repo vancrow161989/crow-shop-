@@ -1,0 +1,19 @@
+@layer components {
+  .item-details .carousel-root {
+    @apply md:flex md:flex-row-reverse;
+  }
+  .item-details .carousel-root .thumbs {
+    @apply translate-x-0 translate-y-0 !important;
+  }
+
+  .item-details .carousel-root .thumbs .thumb {
+    @apply md:mb-3 md:block;
+    @apply w-[19%] md:w-[80px] !important;
+  }
+  .item-details .carousel-root .carousel {
+    @apply w-auto;
+  }
+  .item-details .carousel-root .carousel .thumbs-wrapper {
+    @apply m-0 mt-3 md:m-5 md:mt-0;
+  }
+}

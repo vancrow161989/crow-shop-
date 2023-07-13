@@ -1,0 +1,5 @@
+@layer components {
+  .back-to-top {
+    @apply fixed bottom-10 right-8 h-16 w-16 cursor-pointer rounded-full bg-gray-400/20 text-center  text-4xl leading-normal leading-relaxed text-white shadow-lg drop-shadow-xl hover:bg-primary-500;
+  }
+}

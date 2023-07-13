@@ -1,0 +1,37 @@
+:root {
+  --toastify-toast-width: auto;
+}
+
+.Toastify__toast-container {
+  position: fixed;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+.Toastify__toast {
+  margin: 0;
+}
+
+.Toastify__toast--success,
+.Toastify__toast--error {
+  background: var(--toastify-color-success);
+  color: #fff;
+}
+
+.Toastify__toast--error {
+  background: var(--toastify-color-error);
+}
+
+.Toastify__toast--success .Toastify__close-button,
+.Toastify__toast--error .Toastify__close-button {
+  margin-left: 0.5rem;
+  margin-right: 0.1rem;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.Toastify__toast--success .Toastify__toast-icon svg,
+.Toastify__toast--error .Toastify__toast-icon svg {
+  fill: #ffffff;
+}
