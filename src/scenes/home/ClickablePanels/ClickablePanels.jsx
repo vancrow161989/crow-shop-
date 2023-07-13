@@ -1,8 +1,7 @@
 import useCategories from "../../../hooks/useCategories";
-import config from "../../../../config.json";
 import Panels from "../../../components/common/Panels";
 import ClickablePanelsSkeleton from "./ClickablePanelsSkeleton";
-const { baseUrl } = config;
+
 
 function ClickablePanels() {
   const { simpleCategories, isLoading, isError } = useCategories();
@@ -18,7 +17,7 @@ function ClickablePanels() {
               key={category.id}
               label={category.label}
               categoryId={category.id}
-              imgUrl={baseUrl + category.imgUrl}
+              imgUrl={category.imgUrl}
             />
           ))}
         </div>

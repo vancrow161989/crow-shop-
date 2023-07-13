@@ -1,10 +1,9 @@
 import { Carousel } from "react-responsive-carousel";
-import config from "../../../../config.json";
+import { apiUrl } from "../../../../config.json";
 import useFetch from "../../../hooks/useFetch";
 import Slider from "./Slider";
 import CardSkeleton from "../../../components/common/CardSkeleton";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-const { apiUrl } = config;
 const apiEndPoint = `${apiUrl}/home-sliders?populate=image`;
 
 function Slideshow() {
@@ -27,8 +26,9 @@ function Slideshow() {
               key={`slider-${item.id}`}
               title={item.attributes.title}
               content={item.attributes.content}
+              link={item.attributes.link}
               btnText="learn more"
-              img={`${config.baseUrl}${item.attributes.image?.data.attributes.url}`}
+              img={`${item.attributes.image?.data.attributes.url}`}
             />
           ))
         )}

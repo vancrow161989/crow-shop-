@@ -1,5 +1,4 @@
 import { Carousel } from "react-responsive-carousel";
-import { baseUrl } from "../../../config.json";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function ItemGallery({ img, subImages }) {
@@ -18,7 +17,7 @@ function ItemGallery({ img, subImages }) {
           {subImages?.map((images) => (
             <img
               key={images.id}
-              src={baseUrl + images?.attributes?.url}
+              src={images?.attributes?.url}
               alt={images?.attributes?.name}
             />
           ))}

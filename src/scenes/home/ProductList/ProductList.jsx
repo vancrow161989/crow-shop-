@@ -22,7 +22,7 @@ function ProductList() {
       <CategoryLinks categories={featuredCategories} layout="horizontal" />
       <div className="sm:Lgrid-cols-3 my-9 grid grid-cols-2 gap-2 md:my-16 md:grid-cols-5 md:gap-4">
         {transformProducts?.map((item) => (
-          <ProductBox key={item.id} product={item} baseUrl={baseUrl} />
+          <ProductBox key={item.id} product={item} />
         ))}
       </div>
       <div className="mb-8 md:mb-16">

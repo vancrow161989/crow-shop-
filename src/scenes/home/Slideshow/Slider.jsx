@@ -2,7 +2,7 @@ import Skeleton from "react-loading-skeleton";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "react-loading-skeleton/dist/skeleton.css";
 import { Link } from "react-router-dom";
-function Slider({ title, content, img, btnText }) {
+function Slider({ title, content, img, link, btnText }) {
   const bgStyle = { backgroundImage: `url(${img})` };
   return (
     <div
@@ -16,7 +16,7 @@ function Slider({ title, content, img, btnText }) {
           </h1>
           <p className="mb-8 text-white">{content || <Skeleton />}</p>
           <Link
-            to={`/product-list/2`}
+            to={link}
             className="btn btn-primary btn-wide border-0 ">
             {btnText || <Skeleton />}
           </Link>
