@@ -17,7 +17,7 @@ import Login from "./scenes/Login/Login";
 import RequiredAuth from "./scenes/global/RequiredAuth";
 import AuthNoAccess from "./scenes/global/AuthNoAccess";
 import Logout from "./components/common/Logout";
-const Index = lazy(() => import("./scenes/home/index"));
+const Index = lazy(() => import("./scenes/home/Index"));
 const Products = lazy(() => import("./scenes/products/Products"));
 const ProductDetails = lazy(() => import("./scenes/ProductDetails"));
 const Profile = lazy(() => import("./scenes/Profile/Profile"));
