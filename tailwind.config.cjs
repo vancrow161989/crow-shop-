@@ -39,8 +39,8 @@ module.exports = {
         "bottom-road": "center 66%"
       },
       backgroundImage: {
-        "banner-image": "url('../src/assets/img/pink-hair.jpg')",
-        road: "url('../src/assets/img/road.png')"
+        "banner-image": "url('../../src/assets/img/pink-hair.jpg')",
+        road: "url('../../src/assets/img/road.png')"
       }
     }
   },

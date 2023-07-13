@@ -107,18 +107,3 @@ export const clearCart = () => (dispatch) => {
   deleteCartItemsToLocalStorage();
   return dispatch(cartClear());
 };
-
-//selectors
-
-// export const getItemById = (itemId) =>
-//   createSelector(
-//     (state) => state.entities.cart,
-//     (cart) =>
-//       cart.items.products.data.filter((item) => item.id === parseInt(itemId))
-//   );
-
-// export const getBugsByUser = (userId) =>
-//   createSelector(
-//     (state) => state.entities.bugs,
-//     (bugs) => bugs.list.filter((bug) => bug.userId === userId)
-//   );
