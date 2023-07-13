@@ -1,4 +1,4 @@
-import { useEffect, lazy } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { SkeletonTheme } from "react-loading-skeleton";
 import { Routes, Route } from "react-router-dom";
@@ -11,19 +11,19 @@ import { useGetMyUserDataQuery } from "./store/users";
 import SharedLayout from "./scenes/global/SharedLayout";
 import About from "./scenes/About/About";
 import Contact from "./scenes/Contact/Contact";
+import Index from "./scenes/home/Index";
 import Checkout from "./scenes/Checkout";
 import Registration from "./scenes/Registration/Registration";
 import Login from "./scenes/Login/Login";
 import RequiredAuth from "./scenes/global/RequiredAuth";
 import AuthNoAccess from "./scenes/global/AuthNoAccess";
 import Logout from "./components/common/Logout";
-const Index = lazy(() => import("./scenes/home/Index"));
-const Products = lazy(() => import("./scenes/products/Products"));
-const ProductDetails = lazy(() => import("./scenes/ProductDetails"));
-const Profile = lazy(() => import("./scenes/Profile/Profile"));
-const BlogHome = lazy(() => import("./blog/BlogHome"));
-const Confirmation = lazy(() => import("./scenes/Confirmation/Confirmation"));
-const PageNotFound = lazy(() => import("./components/PageNotFound"));
+import Products from "./scenes/products/Products";
+import ProductDetails from "./scenes/ProductDetails";
+import Profile from "./scenes/Profile/Profile";
+import BlogHome from "./blog/BlogHome";
+import Confirmation from "./scenes/Confirmation/Confirmation";
+import PageNotFound from "./scenes/Confirmation/Confirmation";
 
 function App() {
   const dispatch = useDispatch();

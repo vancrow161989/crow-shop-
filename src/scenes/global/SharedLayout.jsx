@@ -1,4 +1,4 @@
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "./Header/Header";
 import Footer from "./Footer";
@@ -24,14 +24,7 @@ function SharedLayout() {
       <div className="mobile-menu-content">
         <Header setOpenMenu={setOpenMenu} />
         <main className="min-h-[400px] md:min-h-[600px]">
-          <Suspense
-            fallback={
-              <div className="absoluteCenter">
-                <Loader loadingText="Loading Page..." />
-              </div>
-            }>
-            <Outlet />
-          </Suspense>
+          <Outlet />
         </main>
         <Footer />
         <BacktoTop />
