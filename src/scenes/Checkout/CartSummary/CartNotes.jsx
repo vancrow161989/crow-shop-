@@ -1,7 +1,9 @@
 function CartNotes() {
   return (
     <div className="mt-7 border p-4 text-sm text-gray-500">
-      <h3 className="font-body text-gray-400">For Testing Only</h3>
+      <h3 className="font-body text-lg font-bold text-gray-400">
+        For Testing Only
+      </h3>
       <p>
         After clicking the <b>"Proceed to Payment"</b> button, you will be
         redirected to the Stripe website to perform a test payment. For testing

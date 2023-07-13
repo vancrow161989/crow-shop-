@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import MenuMiniTrigger from "../MobileMenu/MenuMiniTrigger";
 import ActionLinks from "./ActionLinks";
-import SearchBox from "../../../components/common/SearchBox";
+import SearchBox from "../../../components/common/SearchBox/SearchBox";
 
 function HeaderTop({ setOpenMenu }) {
   const [isSticky, setIsSticky] = useState(false);

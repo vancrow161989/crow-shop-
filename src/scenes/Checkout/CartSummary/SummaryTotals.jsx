@@ -2,12 +2,6 @@ import { useSelector } from "react-redux";
 import Numeral from "react-numeral";
 
 function SummaryTotals() {
-  // const cartTotals = useSelector(
-  //   (store) => store.entities.cart.cartTotalAmount
-  // );
-  // const cartTotalQuantity = useSelector(
-  //   (store) => store.entities.cart.cartTotalQuantity
-  // );
   const cartTotals = useSelector((store) => store.cart.cartTotalAmount);
   const cartTotalQuantity = useSelector(
     (store) => store.cart.cartTotalQuantity

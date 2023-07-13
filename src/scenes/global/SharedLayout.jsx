@@ -4,7 +4,7 @@ import Header from "./Header/Header";
 import Footer from "./Footer";
 import BacktoTop from "../../components/common/BacktoTop";
 import MobileMenu from "./MobileMenu/MobileMenu";
-import Loader from "../../components/common/loader";
+
 
 function SharedLayout() {
   const [isOpenMenu, setOpenMenu] = useState(false);

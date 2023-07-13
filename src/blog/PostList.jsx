@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { UserIcon, CalendarIcon, ClockIcon } from "@heroicons/react/24/solid";
 import InfiniteScroll from "react-infinite-scroll-component";
-import Loader from "../components/common/loader";
+import Loader from "../components/common/Loader";
 import { baseUrl } from "../../config.json";
 import { deleteBlog } from "../services/blogServices";
 import { formatDate, formatTime } from "./../utils/helpers";

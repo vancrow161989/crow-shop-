@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import HeaderTop from "./HeaderTop";
 import HeaderBottom from "./HeaderBottom";
-import Breadcrumbs from "../../../components/common/breadcrumbs";
+import Breadcrumbs from "../../../components/common/Breadcrumbs";
 
 function Header({ setOpenMenu }) {
   const location = useLocation();

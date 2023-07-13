@@ -3,7 +3,7 @@ import Numeral from "react-numeral";
 import { Link } from "react-router-dom";
 import useProducts from "../../../hooks/useProducts";
 import { baseUrl } from "../../../../config.json";
-import Loader from "../loader";
+import Loader from "../Loader";
 
 function SearchResults({ searchKey }) {
   const options = `&publicationState=live&filters[name][$contains]=${searchKey}`;

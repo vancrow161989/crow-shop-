@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Stepper from "../../components/Stepper";
 import CartSummary from "./CartSummary/CartSummary";
-import BillingForm from "./BillingForm";
+import BillingForm from "./BillingForm/BillingForm";
 
 function Checkout() {
   const [activeStep, setActiveStep] = useState(1);
@@ -11,6 +11,7 @@ function Checkout() {
     { number: 1, label: "Billing" },
     { number: 2, label: "Payment" }
   ];
+  
   return (
     <div className="checkout m:py-16 py-11 px-4 md:px-0">
       <div className="container">

@@ -19,8 +19,4 @@
   h4 {
     @apply mb-7;
   }
-
-  h3 {
-    @apply mb-2 text-xl font-bold;
-  }
 }

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";

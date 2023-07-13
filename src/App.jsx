@@ -18,7 +18,7 @@ import Login from "./scenes/Login/Login";
 import RequiredAuth from "./scenes/global/RequiredAuth";
 import AuthNoAccess from "./scenes/global/AuthNoAccess";
 import Logout from "./components/common/Logout";
-import Products from "./scenes/products/Products";
+import Products from "./scenes/Products/Products";
 import ProductDetails from "./scenes/ProductDetails";
 import Profile from "./scenes/Profile/Profile";
 import BlogHome from "./blog/BlogHome";

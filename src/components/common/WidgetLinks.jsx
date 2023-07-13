@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function WidgetLinks() {
   return (
     <div>
-      <h3 className="mb-4  text-white">Menu</h3>
+      <h3 className="mb-4 text-white">Menu</h3>
       <ul>
         <li className="mb-1 text-sm">
           <Link className="hover:text-white" to="/">
