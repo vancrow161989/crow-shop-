@@ -48,7 +48,7 @@ function PostListRef(
   const renderLoader = () => {
     return (
       <div className="text-center">
-        <ArrowPathIcon className="my-4 mx-auto h-20 w-20 animate-spin py-4" />
+        <ArrowPathIcon className="mx-auto my-4 h-20 w-20 animate-spin py-4" />
         <p>Loading Post...</p>
       </div>
     );
@@ -87,7 +87,7 @@ function PostListRef(
   if (isLoading) return <h1>Loading...</h1>;
   return (
     <div className="py-14">
-      {posts?.data?.length && (
+      {posts?.data?.length > 0 && (
         <InfiniteScroll
           dataLength={posts?.data}
           next={getMorePosts}
@@ -109,7 +109,7 @@ function PostListRef(
                 )}
               </div>
               <div className="post-body sm:w-9/12">
-                <h3 className="post-title mt-2 mb-1 text-base font-semibold sm:mt-0">
+                <h3 className="post-title mb-1 mt-2 text-base font-semibold sm:mt-0">
                   {post?.attributes?.title}
                 </h3>
                 <p className="post-meta mb-2 text-xs text-gray-400">
