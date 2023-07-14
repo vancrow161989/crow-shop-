@@ -33,7 +33,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="mt-0 border-t border-gray-100 border-opacity-10 py-3  text-center md:mt-10">
+      <div className="mt-0 border-t border-gray-100 border-opacity-10 py-3  md:mt-10 md:text-center">
         <span className="text-xs">
           © {year} Michael Ivan Togeno. All Rights Reserved.
         </span>

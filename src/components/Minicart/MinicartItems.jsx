@@ -7,7 +7,6 @@ import { TrashIcon } from "@heroicons/react/24/solid";
 import useProductsInCart from "../../hooks/useProductsInCart";
 import useModal from "../../hooks/useModal";
 import { handleKeyDown } from "../../utils/forms";
-import { baseUrl } from "../../../config.json";
 import {
   calculateCartTotals,
   updateCartItemQuantity,
@@ -142,7 +141,7 @@ function MinicartItems() {
       )}
 
       {products?.length !== 0 ? (
-        <ul className="mt-2 mb-4 max-h-[50vh] min-h-[50px] overflow-y-auto border-t-[1px] border-gray-300 pb-1 pt-1">
+        <ul className="mb-4 mt-2 max-h-[50vh] min-h-[50px] overflow-y-auto border-t-[1px] border-gray-300 pb-1 pt-1">
           {products
             ?.map((product) => (
               <li
@@ -153,9 +152,8 @@ function MinicartItems() {
                     {renderProductLink(
                       product?.item?.id,
 
-                      baseUrl +
-                        product?.item?.attributes?.mainImage?.data?.attributes
-                          ?.formats?.thumbnail?.url
+                      product?.item?.attributes?.mainImage?.data?.attributes
+                        ?.formats?.thumbnail?.url
                     )}
                   </div>
                   <div className="cart-details mt-1 w-8/12">
@@ -233,7 +231,7 @@ function MinicartItems() {
                       </div>
                       <div>
                         <TrashIcon
-                          className="ml-auto mb-2  w-6 cursor-pointer stroke-none text-gray-500"
+                          className="mb-2 ml-auto  w-6 cursor-pointer stroke-none text-gray-500"
                           onClick={() => raiseOpenModal(product)}
                         />
                       </div>
