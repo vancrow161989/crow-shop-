@@ -36,7 +36,7 @@ function SearchResults({ searchKey }) {
               <div className="search-img w-2/12">
                 <img
                   className="block w-full"
-                  src={baseUrl + product.image}
+                  src={product.image}
                   alt={product.name}
                 />
               </div>
