@@ -46,7 +46,7 @@ function SummaryItems() {
               <td data-title="Product" className="border  border-gray-200 p-3">
                 <img
                   className="inline-block max-w-[70px]  sm:max-w-[50px]"
-                  src={`${baseUrl}${product.item?.attributes?.mainImage?.data?.attributes?.url}`}
+                  src={`${product.item?.attributes?.mainImage?.data?.attributes?.url}`}
                   alt=""
                 />
               </td>

@@ -83,10 +83,10 @@ function Minicart() {
           <span className="hidden md:inline-block">Cart</span>
         </button>
         <div
-          className={`absolute top-[10px] left-10 h-6  w-6 overflow-hidden rounded-2xl border-gray-400 px-[2px] text-center text-xs font-bold leading-6 md:left-[86px] md:border ${
+          className={`absolute left-10 top-[10px] h-6  w-6 overflow-hidden rounded-2xl border border-gray-400 px-[2px] text-center text-xs font-bold leading-6 md:left-[86px] ${
             isDropdownShow
               ? "bg-primary-500 text-white"
-              : "md:bg-white md:text-primary-900"
+              : "bg-white text-primary-900"
           }`}>
           <span>{cartTotalQuantity > 99 ? 99 + "+" : cartTotalQuantity}</span>
         </div>
