@@ -1,6 +1,6 @@
 {
-  "baseUrl": "http://localhost:1337",
-  "apiUrl": "http://localhost:1337/api",
+  "baseUrl": "https://crow-shop-server.onrender.com",
+  "apiUrl": "https://crow-shop-server.onrender.com/api",
   "productsApiUrl": "api/items?populate=*",
   "categoriesApiUrl": "api/categories?populate=*",
   "blogsApiUrl": "api/blogs?populate=*",
