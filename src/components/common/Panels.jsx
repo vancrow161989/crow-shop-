@@ -4,7 +4,7 @@ function Panels({ label, categoryId, imgUrl }) {
     <Link
       key={label}
       to={`/product-list/category/${categoryId}`}
-      className="relative block h-24 w-full bg-cover bg-center bg-no-repeat md:h-52"
+      className="relative block h-32 w-full bg-cover bg-center bg-no-repeat md:h-52"
       style={{
         backgroundImage: `url(${imgUrl})`
       }}>
