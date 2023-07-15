@@ -4,7 +4,6 @@ import { toast } from "react-toastify";
 import { UserIcon, CalendarIcon, ClockIcon } from "@heroicons/react/24/solid";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Loader from "../components/common/Loader";
-import { baseUrl } from "../../config.json";
 import { deleteBlog } from "../services/blogServices";
 import { formatDate, formatTime } from "./../utils/helpers";
 
@@ -34,7 +33,7 @@ function PostListRef(
       return (
         <img
           className="block h-auto w-full rounded-md"
-          src={baseUrl + imgUrl}
+          src={imgUrl}
           alt={imgTitle}
         />
       );

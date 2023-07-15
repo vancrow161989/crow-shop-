@@ -2,15 +2,15 @@ function ListItems({ categories, onSelectCategory, selectedCategory }) {
   const renderActiveClass = (id) => {
     console.log("selected", selectedCategory);
     return selectedCategory === id
-      ? "block w-full bg-primary-500 p-2 text-left text-sm md:text-lg text-white"
+      ? "block w-full bg-primary-500 p-2 text-center md:text-left text-sm md:text-lg text-white"
       : id === "" && selectedCategory === 0
-      ? "block w-full p-2 bg-primary-500 text-left text-white text-sm md:text-lg  "
-      : "block w-full p-2 text-left text-sm md:text-lg  hover:text-primary-500";
+      ? "block w-full p-2 bg-primary-500 text-center md:text-left text-white text-sm md:text-lg"
+      : "block w-full p-2 text-center text-sm  hover:text-primary-500  md:text-left  md:text-lg";
   };
 
   return (
     <div className="list-items">
-      <ul className="list-wrap mt-4 border px-2 shadow-xl md:mt-0 md:border-0 md:px-0 md:shadow-none ">
+      <ul className="list-wrap mt-4 border shadow-xl md:mt-0 md:border-0  md:shadow-none ">
         <li className="border-b border-gray-200 md:border-0">
           <button
             className={renderActiveClass("")}
