@@ -1,4 +1,8 @@
 @layer utilities {
+  body.menu-active {
+    height: 100%;
+    overflow: hidden;
+  }
   .absoluteCenter {
     position: absolute;
     top: 50%;

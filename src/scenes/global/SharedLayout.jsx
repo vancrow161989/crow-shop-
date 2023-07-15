@@ -5,7 +5,6 @@ import Footer from "./Footer";
 import BacktoTop from "../../components/common/BacktoTop";
 import MobileMenu from "./MobileMenu/MobileMenu";
 
-
 function SharedLayout() {
   const [isOpenMenu, setOpenMenu] = useState(false);
   const location = useLocation();
@@ -14,8 +13,13 @@ function SharedLayout() {
     if (isOpenMenu) setOpenMenu(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    if (isOpenMenu) document.body.classList.add("menu-active");
+    else document.body.classList.remove("menu-active");
+  }, [isOpenMenu]);
+
   const renderClass = () => {
-    return isOpenMenu ? "fixed h-[100vh] overflow-hidden" : "relative";
+    return isOpenMenu ? "absolute overflow-hidden" : "relative";
   };
 
   return (
