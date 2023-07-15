@@ -6,7 +6,7 @@ function ClickablePanelsSkeleton() {
 
   return (
     <>
-      <h2 className="mt-10 mb-5 text-center font-serif text-large md:mt-20 md:mb-10 md:text-4xl">
+      <h2 className="mb-5 mt-14 text-center font-serif text-2xl md:mb-10 md:mt-20 md:text-4xl">
         Our Products
       </h2>
       <div>

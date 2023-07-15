@@ -7,10 +7,10 @@ function ProductAllSkeleton() {
   return (
     <div className="container">
       <div>
-        <div className="my-16 grid grid-cols-4 gap-4">
+        <div className="my-8 grid grid-cols-2 gap-2 md:my-16 md:grid-cols-4 md:gap-4">
           {numCard.map((el, index) => (
             <div key={index} className="mb-8">
-              <Skeleton height={450} className="mb-3" />
+              <Skeleton height={350} className="mb-3" />
               <Skeleton height={20} className="mb-3" />
               <Skeleton height={20} width={80} />
             </div>

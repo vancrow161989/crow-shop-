@@ -3,7 +3,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 function CardSkeleton() {
   return (
     <div>
-      <Skeleton height={650}></Skeleton>
+      <Skeleton className="h-[400px] md:h-[650px]"></Skeleton>
     </div>
   );
 }

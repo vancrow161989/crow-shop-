@@ -116,8 +116,8 @@ function MinicartItems() {
   const renderMessage = () => {
     return (
       <>
-        `Are you sure you want to remove{" "}
-        <b>{selectedItem?.item?.attributes?.name}?`</b>
+        Are you sure you want to remove{" "}
+        <b>{selectedItem?.item?.attributes?.name}?</b>
       </>
     );
   };

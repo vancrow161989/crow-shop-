@@ -12,7 +12,6 @@ function PersonalInfo({ register, errors, type = "billing" }) {
           </label>
 
           <input
-            autoFocus
             className="w-full"
             type="text"
             id={formattedName("FirstName")}
