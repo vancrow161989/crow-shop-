@@ -80,7 +80,7 @@ function ProfileInfo({ profileData }) {
 
   return (
     <>
-      <h2 className="md:text-xlg font-body text-3xl  leading-normal text-gray-700">
+      <h2 className="md:text-xlg font-body text-2xl  text-gray-700 md:leading-normal">
         Profile Information
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>

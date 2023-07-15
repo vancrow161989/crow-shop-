@@ -1,9 +1,8 @@
-
 function About() {
   return (
     <div className="about mt-1 py-12 md:mt-4">
       <div className="container max-w-xl px-6 md:px-0">
-        <h1 className="md:text-xlg font-body text-3xl  leading-normal text-gray-700">
+        <h1 className="md:text-xlg font-body text-2xl  text-gray-700 md:leading-normal">
           Welcome to my all-in-one ecommerce website and blog
         </h1>
         <div className="about-text">

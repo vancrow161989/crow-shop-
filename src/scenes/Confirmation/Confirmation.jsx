@@ -16,8 +16,8 @@ function Confirmation() {
 
   return (
     <div className="container-sm container">
-      <div className="confirmation mx-auto mt-2 max-w-2xl py-12 px-4 text-center md:mt-4 md:px-0">
-        <h1 className="md:text-xlg font-body text-3xl  leading-normal text-gray-700">
+      <div className="confirmation mx-auto mt-2 max-w-2xl px-4 py-12 text-center md:mt-4 md:px-0">
+        <h1 className="md:text-xlg font-body text-2xl  text-gray-700 md:leading-normal">
           Congratulations on your purchase!{" "}
         </h1>
         <p>
