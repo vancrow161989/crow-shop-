@@ -97,7 +97,7 @@ function PostForm({
 
   const onSubmit = async (formData) => {
     const currentTime = new Date().toISOString();
-    const lastId = postData.data[0].id + 1;
+    const lastId = postData?.data[0]?.id ? postData?.data[0]?.id : 0 + 1;
     formData.publishedAt = currentTime;
     formData.user = {
       data: {
@@ -186,7 +186,7 @@ function PostForm({
           <div className="control">
             <input
               autoFocus
-              className="h-12 w-full pr-12 pl-3 text-base text-gray-600"
+              className="h-12 w-full pl-3 pr-12 text-base text-gray-600"
               type="text"
               id="title"
               defaultValue={updateData ? updateData.title : ""}
@@ -207,7 +207,7 @@ function PostForm({
           <div className="control">
             <textarea
               rows="6"
-              className="w-full pr-12 pl-3 text-base text-gray-600"
+              className="w-full pl-3 pr-12 text-base text-gray-600"
               id="content"
               maxLength={450}
               defaultValue={updateData ? updateData.content : ""}
@@ -235,7 +235,7 @@ function PostForm({
               </div>
             )}
             <input
-              className="float-left w-full w-auto pr-12 pl-3 text-base text-gray-600"
+              className="float-left w-auto w-full pl-3 pr-12 text-base text-gray-600"
               type="file"
               id="postImage"
               {...register("postImage")}
