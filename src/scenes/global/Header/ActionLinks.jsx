@@ -18,7 +18,7 @@ function ActionLinks() {
           <button
             onDoubleClick={() => navigate("/profile")}
             onClick={() => setDropdownShow(!isDropdownShow)}
-            className=" ml-6 inline-block py-2 px-2 md:ml-4 md:px-4">
+            className=" ml-4 inline-block px-2 py-2 md:ml-4 md:px-4">
             <UserIcon className="mr-2 inline-block w-6 align-middle" />
             <span className="hidden md:inline-block">{`Hi ${currentUser.username}`}</span>
           </button>
@@ -43,7 +43,7 @@ function ActionLinks() {
         </li>
       ) : (
         <li>
-          <Link to="/login" className="ml-4 inline-block py-2 px-2 md:px-4">
+          <Link to="/login" className="ml-4 inline-block px-2 py-2 md:px-4">
             <UserIcon className="mr-2 inline-block w-6 align-middle" />
             <span className="hidden md:inline-block">Login</span>
           </Link>
