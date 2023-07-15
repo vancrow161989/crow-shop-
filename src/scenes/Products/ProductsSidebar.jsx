@@ -39,7 +39,7 @@ function ProductsSidebar({
         <div className={`${isOpen ? "block" : "hidden"} md:block`}>
           <ListItems
             categories={categories}
-            selectedCategory={selectedCategory}
+            selectedCategory={selectedCategory || 0}
             onSelectCategory={handleSelectCategory}
           />
         </div>

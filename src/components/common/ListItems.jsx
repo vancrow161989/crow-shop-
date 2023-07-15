@@ -1,7 +1,10 @@
 function ListItems({ categories, onSelectCategory, selectedCategory }) {
   const renderActiveClass = (id) => {
+    console.log("selected", selectedCategory);
     return selectedCategory === id
       ? "block w-full bg-primary-500 p-2 text-left text-sm md:text-lg text-white"
+      : id === "" && selectedCategory === 0
+      ? "block w-full p-2 bg-primary-500 text-left text-white text-sm md:text-lg  "
       : "block w-full p-2 text-left text-sm md:text-lg  hover:text-primary-500";
   };
 
