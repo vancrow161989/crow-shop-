@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
+import useScrollToTop from "../../hooks/useScrollToTop";
 import Header from "./Header/Header";
 import Footer from "./Footer";
 import BacktoTop from "../../components/common/BacktoTop";
@@ -8,6 +9,7 @@ import MobileMenu from "./MobileMenu/MobileMenu";
 function SharedLayout() {
   const [isOpenMenu, setOpenMenu] = useState(false);
   const location = useLocation();
+  useScrollToTop();
 
   useEffect(() => {
     if (isOpenMenu) setOpenMenu(false);
