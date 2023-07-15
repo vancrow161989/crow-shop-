@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function CategoryLinks({ categories }) {
   return (
     <div className="list-items">
-      <ul className="list-wrap flex justify-center gap-2.5 text-sm sm:text-lg md:gap-10">
+      <ul className="list-wrap flex justify-center gap-3.5 text-sm sm:text-lg md:gap-10">
         {categories?.map((category) => (
           <li key={category.id}>
             <Link
