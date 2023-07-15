@@ -98,7 +98,7 @@ function PostListRef(
           {posts?.data?.map((post) => (
             <div
               key={post.id}
-              className="post container mb-3 max-w-3xl pb-2 sm:mb-6 sm:flex sm:gap-6 sm:pb-12"
+              className="post container mb-10 max-w-3xl pb-2 sm:mb-6 sm:flex sm:gap-6 sm:pb-12"
               id={post.id}
               {...(udpatedPost === post.id && { ref })}>
               <div className="post-image sm:w-3/12">
