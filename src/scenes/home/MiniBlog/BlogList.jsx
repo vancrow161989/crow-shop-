@@ -3,7 +3,7 @@ import { UserIcon, CalendarIcon, ClockIcon } from "@heroicons/react/24/solid";
 
 function BlogList({ blog }) {
   return (
-    <ul className="mt-14 flex flex-wrap justify-between gap-3 px-4 md:mb-9 md:justify-center md:gap-6 md:px-0">
+    <ul className="mt-14 flex flex-wrap justify-between gap-3 px-4 md:mb-9 md:justify-center md:gap-16 md:px-0">
       {blog?.data?.map((post) => (
         <li className="mb-3 md:mb-6 md:w-[39%]" key={post?.id}>
           <div className="gap-4  md:flex">
