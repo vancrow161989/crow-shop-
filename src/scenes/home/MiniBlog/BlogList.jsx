@@ -46,7 +46,7 @@ function BlogList({ blog }) {
               </p>
             </div>
           </div>
-          <div className="post-body">
+          <div className="post-body mt-3">
             <p className="text-sm">{post?.attributes?.content}</p>
           </div>
         </li>

@@ -3,14 +3,14 @@ import BlogList from "./BlogList";
 import { Link } from "react-router-dom";
 
 function MiniBlog() {
-  const options = `&sort[0]=createdAt%3Adesc&publicationState=live&pagination[pageSize]=4`;
+  const options = `&sort[0]=createdAt%3Aasc&publicationState=live&pagination[pageSize]=4`;
   const { postData, isError, isLoading, setPosts, fetchPosts } =
     usePosts(options);
 
   return (
     <section className="border-y border-gray-100 bg-gray-100 py-8 shadow-lg">
       <div className="container">
-        <h2 className="mt-10 mb-10 text-center font-serif text-2xl md:text-4xl">
+        <h2 className="mb-10 mt-10 text-center font-serif text-2xl md:text-4xl">
           Latest Posts
         </h2>
 
