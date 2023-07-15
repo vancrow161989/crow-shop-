@@ -11,7 +11,7 @@ function MiniBlog() {
     <section className="border-y border-gray-100 bg-gray-100 py-8 shadow-lg">
       <div className="container">
         <h2 className="mb-10 mt-10 text-center font-serif text-2xl md:text-4xl">
-          Latest Posts
+          Featured Posts
         </h2>
 
         <BlogList blog={postData} />
