@@ -1,4 +1,3 @@
-import { baseUrl } from "../../../../config.json";
 import { formatDate, formatTime } from "../../../utils/helpers";
 import { UserIcon, CalendarIcon, ClockIcon } from "@heroicons/react/24/solid";
 
@@ -11,12 +10,12 @@ function BlogList({ blog }) {
             <div className="md:w-3/12">
               <img
                 className="rounded-md"
-                src={`${baseUrl}${post?.attributes?.image?.data?.attributes?.url}`}
+                src={`${post?.attributes?.image?.data?.attributes?.url}`}
                 alt={post?.attributes?.title}
               />
             </div>
             <div className="md:w-9/12">
-              <h3 className=" mt-4 mb-1 text-md font-semibold md:mt-0">
+              <h3 className=" mb-1 mt-4 text-md font-semibold md:mt-0">
                 {post?.attributes?.title}
               </h3>
               <p className="post-meta mb-4 text-xs text-gray-400">
