@@ -10,7 +10,6 @@ import {
   getPostById,
   updateSinglePost
 } from "../services/blogServices";
-import { baseUrl } from "../../config.json";
 import { postFormSchema, postUpdateFormSchema } from "./../utils/formSchema";
 
 function PostForm({
@@ -229,7 +228,7 @@ function PostForm({
             {(imagePreview || updateData) && (
               <div className="imagePreview float-left mr-3 w-36 ">
                 <img
-                  src={imagePreview ? imagePreview : baseUrl + updateData.image}
+                  src={imagePreview ? imagePreview : updateData.image}
                   alt={updateData?.title}
                 />
               </div>
