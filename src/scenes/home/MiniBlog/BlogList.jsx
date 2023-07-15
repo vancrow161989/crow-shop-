@@ -44,8 +44,10 @@ function BlogList({ blog }) {
                   </span>
                 </span>
               </p>
-              <p className="text-sm">{post?.attributes?.content}</p>
             </div>
+          </div>
+          <div className="post-body">
+            <p className="text-sm">{post?.attributes?.content}</p>
           </div>
         </li>
       ))}
