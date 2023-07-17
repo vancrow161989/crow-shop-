@@ -58,7 +58,7 @@ function ProductsContent({
           <ProductBox key={item.id} product={item} baseUrl={baseUrl} />
         ))}
       </div>
-      <div className="actions items-center justify-between pb-8 text-center md:flex md:pb-0 md:pt-12 md:text-left">
+      <div className="actions items-center justify-between pb-8 text-center md:flex md:pb-12  md:pt-12 md:text-left">
         <PageNumIndicator
           pageIndex={pageIndex}
           pageSize={pagination?.pageSize}
