@@ -57,7 +57,7 @@ function PostListRef(
       await deleteBlog(postId);
       setUdpatedPost(null);
       onUpdatePost();
-      toast.success("Successfully Deleted X", {
+      toast.success("Successfully Deleted", {
         position: "top-center",
         hideProgressBar: true
       });
