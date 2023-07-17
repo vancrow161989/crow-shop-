@@ -4,13 +4,10 @@ import useCategories from "../../../hooks/useCategories";
 import ProductSkeleton from "./ProductSkeleton";
 import CategoryLinks from "../../../components/common/CategoryLinks";
 import ProductBox from "../../../components/common/ProductBox";
-import config from "../../../../config.json";
-const { baseUrl } = config;
 const options = "&pagination[limit]=15";
 
 function ProductList() {
-  const { transformProducts, isLoading, isSuccess, isError, error } =
-    useProducts(options);
+  const { transformProducts, isLoading, isError } = useProducts(options);
   const { featuredCategories } = useCategories();
   return isLoading || isError ? (
     <ProductSkeleton />

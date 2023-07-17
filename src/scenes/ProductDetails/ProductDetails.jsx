@@ -1,5 +1,5 @@
 import { useMemo, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Markdown from "marked-react";
 import useFetch from "../../hooks/useFetch";
 import { baseUrl } from "../../../config.json";
@@ -9,14 +9,15 @@ import AddToCart from "./AddToCart";
 
 function ProductDetails() {
   const { productId } = useParams();
+  const navigate = useNavigate();
   const url = `${baseUrl}/api/items/${productId}?populate=*`;
 
-  const { data, isLoading, errors } = useFetch(url);
+  const { data, isLoading } = useFetch(url);
   const { data: product } = data ?? {};
 
   useEffect(() => {
-    console.log("isLoading", isLoading);
-  }, [isLoading]);
+    if (productId) return navigate("/*", { replace: true });
+  }, [productId]);
 
   const transformProduct = useMemo(() => {
     return product && mapToViewModel(product);
