@@ -63,18 +63,16 @@ function App() {
           <Route path="/" element={<SharedLayout />}>
             <Route path="/" exact element={<Index />} />
             <Route path="/about" element={<About />} />
-            <Route path="/product-list" element={<Products />}>
-              <Route
-                path="/product-list/category/:catId?"
-                element={<Products />}
-              />
-              <Route
-                exact
-                path="/product-list/:productId"
-                element={<ProductDetails />}
-              />
-            </Route>
-
+            <Route path="/product-list" element={<Products />} />
+            <Route
+              path="/product-list/category/:catId?"
+              element={<Products />}
+            />
+            <Route
+              exact
+              path="/product-list/:productId"
+              element={<ProductDetails />}
+            />
             <Route path="/checkout/success" element={<Confirmation />} />
             <Route path="/blog" element={<BlogHome />} />
             <Route path="/contact" element={<Contact />} />

@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const useFetch = (url) => {
   const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
   const [errors, setErrors] = useState(null);
   const navigate = useNavigate();
 
@@ -15,11 +15,11 @@ const useFetch = (url) => {
     const signal = controller.signal;
     const getData = async () => {
       try {
-        setLoading(true);
         const { data } = await http.get(url, {
           signal
         });
         setData(data ? data : []);
+        setLoading(false);
       } catch (ex) {
         if (ex.response && ex.response.status === 404) {
           navigate("*", { replace: true });
@@ -27,7 +27,6 @@ const useFetch = (url) => {
           toast.error(ex.message);
           setErrors(ex.message);
         }
-      } finally {
         setLoading(false);
       }
     };
