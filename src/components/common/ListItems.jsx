@@ -1,6 +1,5 @@
 function ListItems({ categories, onSelectCategory, selectedCategory }) {
   const renderActiveClass = (id) => {
-    console.log("selected", selectedCategory);
     return selectedCategory === id
       ? "block w-full bg-primary-500 p-2 text-center md:text-left text-sm md:text-lg text-white"
       : id === "" && selectedCategory === 0
