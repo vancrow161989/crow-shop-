@@ -13,7 +13,7 @@ function ItemGallery({ img, subImages }) {
           interval={2000}
           showStatus={false}
           emulateTouch={true}
-          selectedItem={-1}>
+          selectedItem={1}>
           {subImages?.map((images) => (
             <img
               key={images.id}
