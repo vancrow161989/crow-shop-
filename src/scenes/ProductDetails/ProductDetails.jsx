@@ -15,10 +15,6 @@ function ProductDetails() {
   const { data, isLoading } = useFetch(url);
   const { data: product } = data ?? {};
 
-  useEffect(() => {
-    if (productId) return navigate("/*", { replace: true });
-  }, [productId]);
-
   const transformProduct = useMemo(() => {
     return product && mapToViewModel(product);
   }, [product]);
