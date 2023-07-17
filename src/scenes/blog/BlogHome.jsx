@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import PostForm from "./PostForm";
 import PostList from "./PostList";
-import usePosts from "../hooks/usePosts";
-import PageTitle from "../components/common/PageTitle";
-import http from "../services/httpServices";
-import { baseUrl, blogsApiUrl } from "../../config.json";
+import usePosts from "../../hooks/usePosts";
+import PageTitle from "../../components/common/PageTitle";
+import http from "../../services/httpServices";
+import { baseUrl, blogsApiUrl } from "../../../config.json";
 const apiEndPoint = `${baseUrl}/${blogsApiUrl}`;
 
 function BlogHome() {
@@ -37,6 +37,10 @@ function BlogHome() {
 
   const updatePost = () => {
     fetchPosts();
+  };
+
+  const resetAllPost = () => {
+    setAllPosts(postData);
   };
 
   const openUpdateForm = (postId) => {
@@ -81,6 +85,7 @@ function BlogHome() {
             <PostForm
               postData={allPosts}
               setAllPosts={setAllPosts}
+              resetAllPost={resetAllPost}
               postUpdateId={postUpdateId}
               setPostUpdateId={setPostUpdateId}
               setPageIndex={setPageIndex}

@@ -3,18 +3,19 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
-import { selectCurrentUser } from "../store/authSlice";
+import { selectCurrentUser } from "../../store/authSlice";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   addNewBlog,
   getPostById,
   updateSinglePost
-} from "../services/blogServices";
-import { postFormSchema, postUpdateFormSchema } from "./../utils/formSchema";
+} from "../../services/blogServices";
+import { postFormSchema, postUpdateFormSchema } from "../../utils/formSchema";
 
 function PostForm({
   postData,
   setAllPosts,
+  resetAllPost,
   postUpdateId,
   setPostUpdateId,
   setUdpatedPost,
@@ -117,6 +118,7 @@ function PostForm({
       await addNewBlog(formData);
       setUdpatedPost(null);
       resetStateAndFields();
+      resetAllPost();
     } catch (err) {
       console.log(err);
     }

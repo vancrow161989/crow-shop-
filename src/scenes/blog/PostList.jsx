@@ -3,9 +3,9 @@ import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { UserIcon, CalendarIcon, ClockIcon } from "@heroicons/react/24/solid";
 import InfiniteScroll from "react-infinite-scroll-component";
-import Loader from "../components/common/Loader";
-import { deleteBlog } from "../services/blogServices";
-import { formatDate, formatTime } from "./../utils/helpers";
+import Loader from "../../components/common/Loader";
+import { deleteBlog } from "../../services/blogServices";
+import { formatDate, formatTime } from "../../utils/helpers";
 
 function PostListRef(
   {
@@ -39,16 +39,8 @@ function PostListRef(
       );
     return (
       <div className="rounded  border border-gray-200">
+        {console.log("imgUrl", imgUrl)}
         <Loader loadingText="loading image..." />
-      </div>
-    );
-  };
-
-  const renderLoader = () => {
-    return (
-      <div className="text-center">
-        <ArrowPathIcon className="mx-auto my-4 h-20 w-20 animate-spin py-4" />
-        <p>Loading Post...</p>
       </div>
     );
   };

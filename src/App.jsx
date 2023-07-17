@@ -21,7 +21,7 @@ import Logout from "./components/common/Logout";
 import Products from "./scenes/Products/Products";
 import ProductDetails from "./scenes/ProductDetails";
 import Profile from "./scenes/Profile/Profile";
-import BlogHome from "./blog/BlogHome";
+import BlogHome from "./scenes/blog/BlogHome";
 import Confirmation from "./scenes/Confirmation/Confirmation";
 import PageNotFound from "./components/PageNotFound";
 
