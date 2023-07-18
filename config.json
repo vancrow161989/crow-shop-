@@ -1,8 +1,8 @@
 {
   "baseUrl": "https://crow-shop-server.onrender.com",
   "apiUrl": "https://crow-shop-server.onrender.com/api",
-  "productsApiUrl": "api/items?populate=*",
-  "categoriesApiUrl": "api/categories?populate=*",
+  "productsApiUrl": "api/items?populate[0]=mainImage,subImages,categories",
+  "categoriesApiUrl": "api/categories?populate=image",
   "blogsApiUrl": "api/blogs?populate=image",
   "usersApiUrl": "/api/users",
   "myUserApiUrl": "/api/users/me",

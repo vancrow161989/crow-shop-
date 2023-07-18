@@ -1,5 +1,4 @@
-import { useEffect, useMemo } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useMemo } from "react";
 import { useGetAllCategoriesQuery } from "../store/categories";
 
 function useCategories() {
