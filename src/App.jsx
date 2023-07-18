@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { storeCredentials } from "./store/authSlice";
 import { addToLocalStorage, calculateCartTotals } from "./store/cart";
-import { getCartItemsFromLocalStorage as getCartItemsFromLocalStorage } from "./services/cartService";
+import { getCartItemsFromLocalStorage } from "./services/cartService";
 import { getTokenLocalStorage } from "./services/authService";
 import { useGetMyUserDataQuery } from "./store/users";
 import SharedLayout from "./scenes/global/SharedLayout";
