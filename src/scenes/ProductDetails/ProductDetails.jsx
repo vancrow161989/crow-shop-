@@ -14,7 +14,7 @@ function ProductDetails() {
 
   const { data, isLoading } = useFetch(url);
   const { data: product } = data ?? {};
-  console.log("data", data);
+
   const transformProduct = useMemo(() => {
     return product && mapToViewModel(product);
   }, [product]);
