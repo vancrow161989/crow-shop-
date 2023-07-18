@@ -2,12 +2,11 @@ import React from "react";
 import Numeral from "react-numeral";
 import { Link } from "react-router-dom";
 import useProducts from "../../../hooks/useProducts";
-import { baseUrl } from "../../../../config.json";
 import Loader from "../Loader";
 
 function SearchResults({ searchKey }) {
-  const options = `&publicationState=live&filters[name][$contains]=${searchKey}`;
-  const { transformProducts, isLoading, isError } = useProducts(options);
+  const options = `&publicationState=live&filters[name][$contain]=${searchKey.toLowerCase()}`;
+  const { transformProducts, isLoading } = useProducts(options);
 
   if (isLoading) return <Loader loadingText="Search results loading..." />;
   return (
