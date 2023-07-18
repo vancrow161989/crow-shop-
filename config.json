@@ -3,7 +3,7 @@
   "apiUrl": "https://crow-shop-server.onrender.com/api",
   "productsApiUrl": "api/items?populate=*",
   "categoriesApiUrl": "api/categories?populate=*",
-  "blogsApiUrl": "api/blogs?populate=*",
+  "blogsApiUrl": "api/blogs?populate=image",
   "usersApiUrl": "/api/users",
   "myUserApiUrl": "/api/users/me",
   "contactApiUrl": "/api/email-lists",
