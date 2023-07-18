@@ -10,13 +10,18 @@ const requestManager = createRequest();
 export async function addNewBlog({ title, content, postImage, user }) {
   const formData = createData(title, content, postImage, user);
   const abortController = new AbortController();
-  const newRequest = http.post(`${apiEndPoint}?populate=*`, formData, {
-    headers: {
-      "Content-Type": "multipart/form-data"
-    },
-    signal: abortController.signal
-  });
+  const newRequest = await http.post(
+    `${apiEndPoint}?populate=image`,
+    formData,
+    {
+      headers: {
+        "Content-Type": "multipart/form-data"
+      },
+      signal: abortController.signal
+    }
+  );
   const successMsg = "Successfully Added";
+  console.log("newRequest blog", newRequest);
   await requestManager.makeRequest(newRequest, successMsg, abortController);
 }
 
@@ -38,7 +43,7 @@ export async function deleteBlog(id) {
 }
 
 export async function getPostById(id) {
-  return await http.get(`${apiEndPoint}/${id}?populate=*`);
+  return await http.get(`${apiEndPoint}/${id}?populate=image`);
 }
 
 function createData(title, content, postImage, user) {
