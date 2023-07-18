@@ -5,9 +5,7 @@ import useProducts from "../../../hooks/useProducts";
 import Loader from "../Loader";
 
 function SearchResults({ searchKey }) {
-  const searchKeyCapitalize =
-    searchKey.charAt(0).toUpperCase() + searchKey.slice(1);
-  const options = `&publicationState=live&filters[name][$contain]=${searchKey}&filters[name][$contain]=${searchKeyCapitalize}`;
+  const options = `&publicationState=live&filters[name][$contain]=${searchKey}`;
   const { transformProducts, isLoading } = useProducts(options);
 
   if (isLoading) return <Loader loadingText="Search results loading..." />;
