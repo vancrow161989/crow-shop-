@@ -10,11 +10,11 @@ import AddToCart from "./AddToCart";
 function ProductDetails() {
   const { productId } = useParams();
   const navigate = useNavigate();
-  const url = `${baseUrl}/api/items/${productId}?populate=*`;
+  const url = `${baseUrl}/api/items/${productId}?populate[0]=subImages`;
 
   const { data, isLoading } = useFetch(url);
   const { data: product } = data ?? {};
-
+  console.log("data", data);
   const transformProduct = useMemo(() => {
     return product && mapToViewModel(product);
   }, [product]);
@@ -26,20 +26,12 @@ function ProductDetails() {
       shortDescription: product.attributes?.shortDescription,
       longDescription: product.attributes?.longDescription,
       price: product.attributes?.price,
-      image: product.attributes?.mainImage?.data?.attributes?.url,
       subImages: product.attributes?.subImages?.data
     };
   }
 
-  const {
-    id,
-    name,
-    shortDescription,
-    longDescription,
-    price,
-    image,
-    subImages
-  } = transformProduct ?? {};
+  const { id, name, shortDescription, longDescription, price, subImages } =
+    transformProduct ?? {};
 
   if (isLoading) return null;
   return (
@@ -47,7 +39,7 @@ function ProductDetails() {
       <div className="container lg:px-44">
         <div className="px-4 md:flex md:gap-10 md:px-0">
           <div className="md:flex md:w-7/12  md:gap-[40px] ">
-            <ItemGallery img={image} subImages={subImages} />
+            <ItemGallery subImages={subImages} />
           </div>
           <div className="md:w-5/12">
             <ItemContent
