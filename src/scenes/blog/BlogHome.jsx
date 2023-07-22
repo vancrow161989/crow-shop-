@@ -13,7 +13,7 @@ function BlogHome() {
   const [isOpenPostForm, setOpenPostForm] = useState(false);
   const [pageIndex, setPageIndex] = useState(1);
   const [udpatedPost, setUdpatedPost] = useState(null);
-  const currentUpdated = useRef();
+  const currentUpdated = useRef(null);
   const options = `&sort[0]=createdAt%3Adesc&publicationState=live&pagination[page]=${1}&pagination[pageSize]=8`;
   const { postData, isError, isLoading, setPosts, fetchPosts } =
     usePosts(options);

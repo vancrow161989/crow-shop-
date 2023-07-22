@@ -7,8 +7,8 @@ import SearchForm from "./SearchForm";
 function SearchBox() {
   const [searchKey, setSearchKey] = useState("");
   const { isModalShow, Modal, handleCloseModal, handleOpenModal } = useModal();
-  const searchInputRef = useRef();
-  const searchFormRef = useRef();
+  const searchInputRef = useRef(null);
+  const searchFormRef = useRef(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -67,7 +67,7 @@ function SearchBox() {
           </div>
         </div>
         <button
-          className="md:absolute md:top-[5px] md:right-[6px]"
+          className="md:absolute md:right-[6px] md:top-[5px]"
           type="button">
           <MagnifyingGlassIcon className="ml-auto mt-2  w-6 cursor-pointer stroke-none  md:mt-0 md:w-5 md:text-primary-900" />
         </button>

@@ -5,7 +5,7 @@ import SearchBox from "../../../components/common/SearchBox/SearchBox";
 
 function HeaderTop({ setOpenMenu }) {
   const [isSticky, setIsSticky] = useState(false);
-  const headerRef = useRef();
+  const headerRef = useRef(null);
 
   const handleScroll = () => {
     const sticky = headerRef.current?.offsetTop;
