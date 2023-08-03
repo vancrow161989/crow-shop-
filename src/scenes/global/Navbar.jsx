@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import {
+  UserIcon,
   HomeIcon,
   CubeIcon,
   EnvelopeIcon,
   ChatBubbleBottomCenterIcon,
-  UserCircleIcon
+  UserCircleIcon,
+  ArrowLeftOnRectangleIcon
 } from "@heroicons/react/24/solid";
 import { selectCurrentUser } from "../../store/authSlice";
 import LogoutIcon from "../../components/icons/LogoutIcon";
@@ -29,7 +31,7 @@ function Navbar() {
         </li>
         <li className="mb-4 md:mb-0">
           <NavLink className="block p-2" to="/about">
-            <UserCircleIcon className="mr-2 inline-block w-6 fill-gray-600 align-middle md:mb-0 md:hidden" />
+            <UserIcon className="mr-2 inline-block w-6 fill-gray-600 align-middle md:mb-0 md:hidden" />
             <span className="inline-block pl-1 align-middle">About</span>
           </NavLink>
         </li>
@@ -46,7 +48,7 @@ function Navbar() {
           </NavLink>
         </li>
 
-        {currentUser?.username && (
+        {currentUser?.username ? (
           <>
             <li className="mb-4 block md:mb-0 md:hidden">
               <NavLink className="block p-2" to="/profile">
@@ -58,6 +60,23 @@ function Navbar() {
               <NavLink className="block p-2" to="/logout">
                 <LogoutIcon className="mr-2 inline-block w-6 fill-gray-600 align-middle md:mb-0 md:hidden" />
                 <span className="inline-block pl-1 align-middle"> Logout</span>
+              </NavLink>
+            </li>
+          </>
+        ) : (
+          <>
+            <li className="mb-4 block md:mb-0 md:hidden">
+              <NavLink className="block p-2" to="/login">
+                <ArrowLeftOnRectangleIcon className="mr-2 inline-block w-6 fill-gray-600 align-middle md:mb-0 md:hidden" />
+                <span className="inline-block pl-1 align-middle">Login</span>
+              </NavLink>
+            </li>
+            <li className="mb-4 block md:mb-0 md:hidden">
+              <NavLink className="block p-2" to="/registration">
+                <UserCircleIcon className="mr-2 inline-block w-6 fill-gray-600 align-middle md:mb-0 md:hidden" />
+                <span className="inline-block pl-1 align-middle">
+                  Registration
+                </span>
               </NavLink>
             </li>
           </>
