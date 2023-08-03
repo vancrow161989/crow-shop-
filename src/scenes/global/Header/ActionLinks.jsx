@@ -20,7 +20,7 @@ function ActionLinks() {
             onClick={() => setDropdownShow(!isDropdownShow)}
             className=" ml-4 inline-block px-2 py-2 md:ml-4 md:px-4">
             <UserIcon className="mr-2 inline-block w-6 align-middle" />
-            <span className="hidden md:inline-block">{`Hi ${currentUser.username}`}</span>
+            <span className="hidden md:inline-block md:align-middle">{`Hi ${currentUser.username}`}</span>
           </button>
           <div className="hidden group-hover/profile:block  ">
             <Dropdown>
@@ -45,7 +45,9 @@ function ActionLinks() {
         <li>
           <Link to="/login" className="ml-4 inline-block px-2 py-2 md:px-4">
             <UserIcon className="mr-2 inline-block w-6 align-middle" />
-            <span className="hidden md:inline-block">Login</span>
+            <span className="hidden md:inline-block md:align-middle">
+              Login
+            </span>
           </Link>
         </li>
       )}
