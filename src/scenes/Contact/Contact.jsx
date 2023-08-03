@@ -22,7 +22,7 @@ function Contact() {
   return (
     <div className="contact-wrap mb-28">
       <div className="container max-w-xl px-6 px-6 md:px-0 md:px-0">
-        <div className="contact-form mt-10 mb-10 rounded border p-5 shadow-lg md:p-10">
+        <div className="contact-form mb-10 mt-10 rounded border p-5 shadow-lg md:p-10">
           <h2 className="text-1xl text-center font-serif md:text-3xl">
             Let's Connect and Ignite Success!
           </h2>
@@ -67,6 +67,10 @@ function Contact() {
                   tabIndex="10"
                   {...register("phoneNumber")}
                 />
+                <small className="text-gray-500">
+                  Sample format{" "}
+                  <span className="font-semibold text-black">639054231234</span>
+                </small>
 
                 {errors.phoneNumber && (
                   <p className="mt-2 bg-[#e74c3c] p-2  text-white">
@@ -102,7 +106,7 @@ function Contact() {
               </label>
               <textarea
                 rows="4"
-                className="w-full pr-12 pl-3 text-base text-gray-600"
+                className="w-full pl-3 pr-12 text-base text-gray-600"
                 tabIndex="3"
                 id="messageContent"
                 maxLength={450}

@@ -52,7 +52,10 @@ function ContactInfo({ register, errors }) {
           tabIndex="3"
           {...register("phoneNumber")}
         />
-
+        <small className="text-gray-500">
+          Sample format{" "}
+          <span className="font-semibold text-black">639054231234</span>
+        </small>
         {errors.phoneNumber && (
           <p className="mt-2 bg-[#e74c3c] p-2  text-white">
             {errors.phoneNumber.message}
