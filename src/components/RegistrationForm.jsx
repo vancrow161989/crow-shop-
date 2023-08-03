@@ -57,7 +57,7 @@ function RegistrationForm() {
         </Link>
         .
       </p>
-      <div className="registration-body billing border bg-gray-100 py-4 px-4 md:px-6 md:py-10">
+      <div className="registration-body billing border bg-gray-100 px-4 py-4 md:px-6 md:py-10">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="input-group mb-6 basis-full">
             <label htmlFor="BillingFirstName" className="mr-3">
@@ -265,6 +265,11 @@ function RegistrationForm() {
                 tabIndex="11"
                 {...register("phoneNumber")}
               />
+
+              <small className="text-gray-500">
+                Sample format{" "}
+                <span className="font-semibold text-black">639054231234</span>
+              </small>
 
               {errors.phoneNumber && (
                 <p className="mt-2 bg-[#e74c3c] p-2  text-white">

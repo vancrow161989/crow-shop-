@@ -14,7 +14,6 @@ export default function () {
       cart: cartReducer,
       auth: authReducer
     },
-    devTools: false,
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware().concat(
         apiSlice.middleware,

@@ -32,7 +32,7 @@ function usePosts(options) {
     const { cancel } = fetchPosts();
     return () => cancel();
   }, []);
-
+  console.log("post data", postData);
   return { postData, isError, isLoading, setPosts: setPostData, fetchPosts };
 }
 
