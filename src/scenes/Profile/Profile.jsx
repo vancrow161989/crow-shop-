@@ -32,14 +32,22 @@ function Profile() {
                 <li className="mb-4 border-b-2 pb-3 pl-2 pr-14">
                   <a
                     onClick={() => setActiveTab(0)}
-                    className="cursor-pointer hover:text-primary-500">
+                    className={
+                      activeTab === 0
+                        ? "cursor-pointer text-primary-500 hover:text-primary-500"
+                        : "cursor-pointer hover:text-primary-500"
+                    }>
                     Profile Information
                   </a>
                 </li>
                 <li className="mb-2 border-b-2 pb-3 pl-2 pr-14">
                   <a
                     onClick={() => setActiveTab(1)}
-                    className="cursor-pointer hover:text-primary-500">
+                    className={
+                      activeTab === 1
+                        ? "cursor-pointer text-primary-500 hover:text-primary-500"
+                        : "cursor-pointer hover:text-primary-500"
+                    }>
                     Account
                   </a>
                 </li>
