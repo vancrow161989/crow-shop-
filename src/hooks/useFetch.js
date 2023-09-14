@@ -24,7 +24,7 @@ const useFetch = (url) => {
         if (ex.response && ex.response.status === 404) {
           navigate("*", { replace: true });
         } else if (!http.isCancel(ex) || ex.name === "AxiosError") {
-          toast.error(ex.message);
+          // toast.error(ex.message);
           setErrors(ex.message);
         }
         setLoading(false);

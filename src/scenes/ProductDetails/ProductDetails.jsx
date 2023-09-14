@@ -12,8 +12,12 @@ function ProductDetails() {
   const navigate = useNavigate();
   const url = `${baseUrl}/api/items/${productId}?populate[0]=subImages`;
 
-  const { data, isLoading } = useFetch(url);
+  const { data, isLoading, errors } = useFetch(url);
   const { data: product } = data ?? {};
+
+  useEffect(() => {
+    if (errors) return navigate("*", { replace: true });
+  }, [errors]);
 
   const transformProduct = useMemo(() => {
     return product && mapToViewModel(product);
